@@ -8,9 +8,12 @@
 	font-size: 18px;
 }
 
+@font-face { font-family: NewParis; src: url('../fonts/NewParisHeadline-Regular.otf'); }
+@font-face { font-family: NewParis; font-weight: bold; src: url('../fonts/NewParisText-Bold.otf'); }
+
 html {
 	height: 100%;
-	background: #000; 
+	background: url("../img/background.webp") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -28,14 +31,26 @@ body {
 }
 
 a {
+	font-weight: lighter;
 	text-decoration: none;
-	color: var(--color-link);
 	outline: none;
+	position: relative;
 }
 
 a:hover {
-	color: #FF81B3 !important;
+	font-weight: 400;
 	outline: none;
+}
+
+a:hover:after {
+	content: "";
+	width: calc(100% + 8px);
+	height: 2px;
+	position: absolute;
+	bottom: -8px;
+	left: -4px;
+	z-index: 1;
+	background: white;
 }
 
 ul {
@@ -49,7 +64,7 @@ header {
 }
 
 nav {
-	max-width: 640px;
+	max-width: 1080px;
 }
 
 nav ul {
@@ -59,7 +74,8 @@ nav ul {
 	padding: 0;
 }
 
-h1 {
+h2 {
+	font-family: NewParis, Arial, sans-serif;
 	font-size: 3rem;
 	margin: 0;
 	padding: 1rem 0;
@@ -120,6 +136,7 @@ h1 {
 
 .card-content h3 {
 	font-size: 22px;
+	font-family: NewParis;
 	margin-top: 0;
 }
 
@@ -129,11 +146,12 @@ h1 {
 	text-rendering: optimizeLegibility;
 	text-align: justify;
 	hyphens: auto;
+	font-weight: lighter;
 }
 
 .homepage-logo {
 	max-width: 332px;
-	margin-bottom: 1rem;
+	margin-bottom: 4rem;
 }
 
 .about-logo {
@@ -151,6 +169,19 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	column-gap: 8px;
+}
+
+.items p {
+	text-transform: uppercase;
+	letter-spacing: 0.04rem;
+}
+
+#logoSection .items {
+	column-gap: 20px;
+}
+
+#logoSection .items p {
+	font-size: 24px;
 }
 
 a, a:visited {
@@ -232,6 +263,10 @@ a, a:visited {
 	text-align-last: center;
 }
 
+.w50 {
+	width: 50%;
+}
+
 .w450 {
 	max-width: 385px;
 }
@@ -256,19 +291,65 @@ a, a:visited {
 	border-top-color: #595959;
 }
 
+.divider {
+	margin: -8px 0;
+}
+
+#aboutSection p {
+	font-weight: lighter;
+	font-size: 19px;
+	line-height: 147%;
+}
+
 #servicesSection1 {
 	column-gap: 80px;
 }
 
 #servicesSection1 p.w450 {
-	font-size: 27px;
-	max-width: 444px;	
+	max-width: 500px;
+	-webkit-hyphens: auto;
 	hyphens: auto;
+	font-size: 27px;
+	line-height: 142%;
+	text-align: justify;
+-moz-text-align-last: center;
+text-align-last: center;
+}
+
+#servicesSection1 .items {
+	margin-bottom: 70px;
 }
 
 #services-grid {
 	display: grid;
 	row-gap: 80px;
+}
+
+#contactSection a {
+	display: block;
+	margin-bottom: 4px;
+}
+#contactSection a:after {
+	content: none;
+}
+
+#contactSection .about-logo {
+	margin-bottom: 2rem;
+}
+
+#contactSection p {
+	font-size: 19px;
+	font-weight: lighter;
+}
+
+#telephone {
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+#contactSection a {
+	font-size: 17px;
+	font-weight: lighter;
 }
 
 @media screen and (max-width: 640px) {
