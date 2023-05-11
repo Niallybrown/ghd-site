@@ -64,7 +64,7 @@ header {
 }
 
 nav {
-	max-width: 1080px;
+	max-width: 1280px;
 }
 
 nav ul {
@@ -76,7 +76,7 @@ nav ul {
 
 h2 {
 	font-family: NewParis, Arial, sans-serif;
-	font-size: 3rem;
+	font-size: 74px;
 	margin: 0;
 	padding: 1rem 0;
 }
@@ -268,7 +268,7 @@ a, a:visited {
 }
 
 .w450 {
-	max-width: 385px;
+	max-width: 446px;
 }
 
 .diamond {
@@ -296,6 +296,7 @@ a, a:visited {
 }
 
 #aboutSection p {
+	text-align: justify;
 	font-weight: lighter;
 	font-size: 19px;
 	line-height: 147%;
@@ -352,8 +353,141 @@ text-align-last: center;
 	font-weight: lighter;
 }
 
-@media screen and (max-width: 640px) {
+form {
+	position: relative;
+}
 
+form button {
+	background: #595959;
+	color: white;
+	border-radius: 4px;
+	box-shadow: none;
+	border: none;
+	padding: 4px 16px;
+}
+
+input {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	text-align: left;
+	width: 100%;
+	margin-bottom: 0.5rem;
+	font-size: 14px;
+	height: 24px;
+	border: none;
+	padding: 0 4px;
+	border-radius: 4px;
+}
+
+textarea {
+	padding: 5px 4px;
+	width: 100%;
+	border: none;
+	height: 200px;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: 14px;
+	resize: none;
+	border-radius: 4px;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+}
+
+#message-field {
+	background: white;
+	padding-bottom: 12px;
+	border-radius: 8px;
+}
+
+
+@media screen and (max-width: 1312px) {
+	section, nav {
+		padding: 0 20px;
+	}
+}
+
+@media screen and (max-width: 1160px) {
+
+	.arrow-wrapper {
+		display: none;
+	}
+
+	section:not(:first-child) {
+		display: block;
+		height: auto;
+		padding-bottom: 7rem;
+	}
+	
+	#servicesSection1 {
+		padding-bottom: 0;
+	}
+
+	#servicesSection1 .flex {
+		display: block;
+	}
+
+	#servicesSection1 p.w450 {
+		font-size: 22px;
+		padding-bottom: 7rem;
+	}
+
+	.w50 {
+		width: 100%;
+	}
+
+	#services-grid, .cards-wrapper {
+		max-width: 514px;
+		margin: 0 auto;
+		display: block;
+	}
+
+	section#logoSection {
+    height: calc(100vh + 10px);
+    display: flex;
+    padding: 0 1rem;
+	}
+
+	#logoSection .items p {
+		font-size: 20px;
+	}
+
+	.card-container {
+		padding-bottom: 4rem;
+	}
+
+	.card-content p {
+		text-align: left;
+		font-size: 16px;
+	}
+
+	hr {
+		display: none;
+	}
+}
+
+.form-section {
+	text-align: left;
+	list-style: none;
+}
+
+@media screen and (max-width: 800px) {
+	.grid {
+		grid-column-gap: 20px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	h2 {
+		font-size: 52px;
+	}
+
+	#aboutSection p {
+		font-size: 16px;
+	}
+
+	#servicesSection1 p.w450 {
+		max-width: 446px;
+	}
 }
 
 @media screen and (max-width: 360px) {
