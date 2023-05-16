@@ -10,6 +10,7 @@
 
 @font-face { font-family: NewParis; src: url('../fonts/NewParisHeadline-Regular.otf'); }
 @font-face { font-family: NewParis; font-weight: bold; src: url('../fonts/NewParisText-Bold.otf'); }
+@font-face { font-family: NewParisItalic; src: url('../fonts/NewParisHeadline-RegularItalic.otf'); }
 
 html {
 	height: 100%;
@@ -101,7 +102,7 @@ h2 {
 
 .grid {	
 	display: grid;
-	grid-template-columns: calc(60% - 25px) calc(40% - 25px);
+	grid-template-columns: calc(55% - 25px) calc(45% - 25px);
 	grid-column-gap: 50px;
 
 }
@@ -121,7 +122,7 @@ h2 {
 
 .card-container img {
 	height: auto;
-	max-width: 232px;
+	max-width: 245px;
 }
 
 .card-image-wrapper {
@@ -155,7 +156,7 @@ h2 {
 }
 
 .about-logo {
-	max-width: 180px;
+	max-width: 220px;
 	margin-bottom: 1rem;
 }
 
@@ -307,14 +308,15 @@ a, a:visited {
 }
 
 #servicesSection1 p.w450 {
+	font-family: NewParisItalic;
 	max-width: 500px;
 	-webkit-hyphens: auto;
 	hyphens: auto;
 	font-size: 27px;
 	line-height: 142%;
 	text-align: justify;
--moz-text-align-last: center;
-text-align-last: center;
+	-moz-text-align-last: center;
+	text-align-last: center;
 }
 
 #servicesSection1 .items {
@@ -343,13 +345,14 @@ text-align-last: center;
 	font-weight: lighter;
 }
 
-#telephone {
-	font-size: 20px;
+#contactSection a {
+	font-size: 17px;
 	font-weight: lighter;
 }
 
-#contactSection a {
-	font-size: 17px;
+a#telephone {
+	font-size: 20px;
+	padding-bottom: 8px;
 	font-weight: lighter;
 }
 
@@ -463,6 +466,10 @@ input:focus, textarea:focus {
 	hr {
 		display: none;
 	}
+
+	.grid {
+		display: block;
+	}
 }
 
 .form-section {
@@ -471,9 +478,68 @@ input:focus, textarea:focus {
 }
 
 @media screen and (max-width: 800px) {
+	html {
+		background: url("../img/background.webp") center no-repeat fixed;
+		background-size: cover;
+	}
 	.grid {
 		grid-column-gap: 20px;
 	}
+	.desktop-header {
+		display: none;
+	}
+}
+
+.topnav {
+	position: relative;
+}
+
+#menuIcon {
+	background: none;
+	box-shadow: none;
+	border: none;
+	position: absolute;
+	right: 0;
+	z-index: 10;
+}
+
+#mobileMenuWrapper {
+	top: 0;
+	position: absolute;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	z-index: 9;
+	display: none;
+	background: url("../img/background.webp") center no-repeat fixed;
+	background-size: cover;
+}
+
+#mobileMenu {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+	display: block;
+	font-family: 'Raleway', sans-serif;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 @media screen and (max-width: 640px) {
@@ -488,6 +554,16 @@ input:focus, textarea:focus {
 	#servicesSection1 p.w450 {
 		max-width: 446px;
 	}
+
+	.homepage-logo {
+		width: 220px;
+	}
+
+	#contactSection > div {
+		max-width: 280px;
+	}
+
+	#telephone {}
 }
 
 @media screen and (max-width: 360px) {
