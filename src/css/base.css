@@ -296,6 +296,10 @@ a, a:visited {
 	margin: -8px 0;
 }
 
+.topnav {
+	display: none;
+}
+
 #aboutSection p {
 	text-align: justify;
 	font-weight: lighter;
@@ -487,6 +491,9 @@ input:focus, textarea:focus {
 	}
 	.desktop-header {
 		display: none;
+	}
+	.topnav {
+		display: block;
 	}
 }
 
