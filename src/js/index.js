@@ -61,4 +61,8 @@ document.getElementById("menuIcon").addEventListener("click", () => {
 });
 
 
+const closeMenu = () => {
+	document.getElementById("mobileMenuWrapper").style = "none";
+}
+
 document.addEventListener('scroll', debounce(logScroll, 500));
