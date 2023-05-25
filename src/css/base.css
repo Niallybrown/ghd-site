@@ -21,7 +21,7 @@ html {
   background-size: cover;
 }
 
-.bg {
+#bg {
 	display: none;
 }
 
@@ -488,10 +488,6 @@ input:focus, textarea:focus {
 }
 
 @media screen and (max-width: 800px) {
-	html {
-		/* background: url("../img/background.jpg") center no-repeat fixed;
-		background-size: cover; */
-	}
 	.grid {
 		grid-column-gap: 20px;
 	}
@@ -501,7 +497,7 @@ input:focus, textarea:focus {
 	.topnav {
 		display: block;
 	}
-	.bg {
+	#bg {
 		background-image: url("../img/background.jpg");
 		background-repeat: no-repeat;
 		background-position: center;
@@ -535,7 +531,6 @@ input:focus, textarea:focus {
 	justify-content: center;
 	z-index: 9;
 	display: none;
-	background: url("../img/background.jpg") center no-repeat fixed;
 	background-size: cover;
 }
 

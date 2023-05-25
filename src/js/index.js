@@ -52,11 +52,14 @@ const debounce = (callback, wait) => {
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 document.getElementById("menuIcon").addEventListener("click", () => {
 	var x = document.getElementById("mobileMenuWrapper");
+	var y = document.getElementById("bg");
 	var main = document.getElementsByClassName("main-inner");
 	if (x.style.display === "flex") {
 		x.style.display = "none";
+		y.style.zIndex = 0;
 	} else {
 		x.style.display = "flex";
+		y.style.zIndex = 1;
 	}
 });
 
