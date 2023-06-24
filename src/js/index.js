@@ -32,7 +32,6 @@ function logScroll() {
 		if(sectionIndex === sectionObjects.length - 1) {
 			document.getElementById("arrow-icon").className = "arrow-up center";
 		} else {
-			console.log(sectionIndex, "there")
 			document.getElementById("arrow-icon").className = "arrow-down center";
 		}
 	});
@@ -56,16 +55,11 @@ document.getElementById("menuIcon").addEventListener("click", () => {
 	var main = document.getElementsByClassName("main-inner");
 	if (x.style.display === "flex") {
 		x.style.display = "none";
-		y.style.zIndex = 0;
+		y.style.zIndex = -1;
 	} else {
 		x.style.display = "flex";
 		y.style.zIndex = 1;
 	}
 });
-
-
-const closeMenu = () => {
-	document.getElementById("mobileMenuWrapper").style = "none";
-}
 
 document.addEventListener('scroll', debounce(logScroll, 500));

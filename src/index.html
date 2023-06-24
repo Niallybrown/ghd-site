@@ -32,6 +32,13 @@
 		<meta name="theme-color" content="#ffffff">
 		<link rel="stylesheet" type="text/css" href="css/base.css?v=10" />
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<script type='text/javascript'>
+
+			function check() {
+				document.getElementById("mobileMenuWrapper").style = "none";
+				document.getElementById("bg").style.zIndex = -1;
+			}
+			</script>
 	</head>
 	<body class="loading cda-hidemobile">
 		<div id="bg"></div>
@@ -57,11 +64,11 @@
 			<!-- Navigation links (hidden by default) -->
 			<div id="mobileMenuWrapper">
 			<img class="homepage-logo block" src="/src/img/logo.svg" alt="logo" />
-			<div id="mobileMenu">
-				<a onclick="closeMenu()" href="#">Home</a>
-				<a onclick="closeMenu()" href="#aboutSection">About</a>
-				<a onclick="closeMenu()" href="#servicesSection1">Services</a>
-				<a onclick="closeMenu()" href="#contactSection">Contact</a>
+			<div id="mobileMenu" onclick="return check()">
+				<a onclick="return check()" href="#">Home</a>
+				<a href="#aboutSection">About</a>
+				<a href="#servicesSection1">Services</a>
+				<a href="#contactSection">Contact</a>
 			</div>
 			</div>
 			<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
@@ -85,9 +92,9 @@
 			<div class="white-text center break-word w450">
 				<img class="about-logo block" src="/src/img/logo.svg" alt="logo" />
 				<h2>Who are we?</h2>
-				<p>We are a construction and maintenance company specialising in roofing and based in South West London but covering all of London as well as Surrey, Berkshire and Hampshire.</p>
+				<p>We are a construction and maintenance company specialising in roofing and brickwork based in South West London but covering all of London as well as Surrey, Berkshire, Hampshire, Sussex and Oxford.</p>
 				<p>We have decades of experience within our ranks and all of our teams are fully qualified, experts in their field with an attitude that ensures we never leave a client without giving them a five star service.</p>
-				<p>We currently work for the majority of large house builders in the UK along with the largest estate agencies in London, various maintenance companies and property developers.</p>
+				<p>We currently work for the majority of large house builders in the UK along with arges estate agencies in London, various maintenance companies, prop- erty developers and of course, every day, domestic customers too!</p>
 			</div>
 		</section>
 		<section id="servicesSection1" class="content white-text">
@@ -221,7 +228,7 @@
 					<!-- your other form fields go here -->
 					<button type="submit">Send</button>
 				</form>
-				<p><img alt="insta" width="42" src="img/Asset9.svg" /></p>
+				<p><a href="https://www.instagram.com/ghdcontracting/"><img alt="insta" width="42" src="img/Asset9.svg" /></a></p>
 				<a id="telephone" href="tel:0203 0060 770">0203 0060 770</a>
 				<a href="mailto:info@ghduk.co.uk">info@ghduk.co.uk</a>
 			</div>
